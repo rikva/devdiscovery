@@ -10,7 +10,7 @@ def open_db():
     try:
         with open('btdump.pickle', 'rb') as dbfile:
             return pickle.load(dbfile)
-    except FileNotFoundError:
+    except IOError:
         return {}
 
 
