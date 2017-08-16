@@ -21,7 +21,7 @@ def store_db(db):
 
 while True:
     db = open_db()
-    cells = parse_cells(scan())
+    cells = tuple(parse_cells(scan()))
     db[datetime.now()] = cells
     store_db(db)
     print("Cells: {}".format(cells))
